@@ -1,3 +1,3 @@
 output "public_dns" {
-    value = aws_instance.ubuntu.public_dns
+    value = aws_eip.ip.public_dns
 }
