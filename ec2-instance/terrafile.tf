@@ -21,8 +21,10 @@ terraform {
 }
 
 module "web" {
-  source = "git@github.com:vinicius-hrq/terraform-module?ref=main"
+  source = "git@github.com:vinicius-hrq/terraform-module?ref=v0.2"
   name   = "web"
+  enable_sg = true
+  ingress_ports = [80,443]
 }
 
 output "dns" {
